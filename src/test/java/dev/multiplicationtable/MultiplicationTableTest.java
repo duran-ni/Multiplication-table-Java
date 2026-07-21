@@ -8,21 +8,21 @@ class MultiplicationTableTest {
     private final MultiplicationTable table = new MultiplicationTable();
 
     @Test
-    void shouldGenerateTableForFive() {
-        String expected =
-            "5 x 1 = 5" + System.lineSeparator() +
-            "5 x 2 = 10" + System.lineSeparator() +
-            "5 x 3 = 15" + System.lineSeparator() +
-            "5 x 4 = 20" + System.lineSeparator() +
-            "5 x 5 = 25" + System.lineSeparator() +
-            "5 x 6 = 30" + System.lineSeparator() +
-            "5 x 7 = 35" + System.lineSeparator() +
-            "5 x 8 = 40" + System.lineSeparator() +
-            "5 x 9 = 45" + System.lineSeparator() +
-            "5 x 10 = 50" + System.lineSeparator();
+void shouldGenerateTableForSeven() {
+    String expected =
+        "7 x 1 = 7" + System.lineSeparator() +
+        "7 x 2 = 14" + System.lineSeparator() +
+        "7 x 3 = 21" + System.lineSeparator() +
+        "7 x 4 = 28" + System.lineSeparator() +
+        "7 x 5 = 35" + System.lineSeparator() +
+        "7 x 6 = 42" + System.lineSeparator() +
+        "7 x 7 = 49" + System.lineSeparator() +
+        "7 x 8 = 56" + System.lineSeparator() +
+        "7 x 9 = 63" + System.lineSeparator() +
+        "7 x 10 = 70" + System.lineSeparator();
 
-        assertEquals(expected, table.generate(5));
-    }
+    assertEquals(expected, table.generate(7));
+}
 
     @Test
     void shouldHandleOne() {
