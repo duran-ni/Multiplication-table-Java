@@ -35,14 +35,16 @@ Ejemplo, para `n = 7`:
 ```
 src/
 ├── assets/
-│ ├── tests-coverage.png
-│ └── tests-verde.png
-├── main/java/dev/multiplicationtable/MultiplicationTable.java
-└── test/java/dev/multiplicationtable/MultiplicationTableTest.java
+│   ├── tests-coverage.png
+│   └── tests-verde.png
+├── main/java/dev/multiplicationtable/
+│   ├── App.java
+│   └── MultiplicationTable.java
+└── test/java/dev/multiplicationtable/
+    └── MultiplicationTableTest.java
 pom.xml
 .gitignore
 README.md
-
 ```
 
 ## 📦 Cómo ejecutar
@@ -63,7 +65,7 @@ mvn clean test
 
 ## ✅ Cobertura de tests
 
-El informe de JaCoCo se genera en `target/site/jacoco/index.html` tras ejecutar `mvn clean test`. Cobertura actual: **84%** (mínimo exigido: 70%).
+El informe de JaCoCo se genera en `target/site/jacoco/index.html` tras ejecutar `mvn clean test`. Cobertura actual: **100%** (mínimo exigido: 70%).
 
 ---
 
