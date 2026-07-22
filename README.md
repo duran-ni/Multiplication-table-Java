@@ -42,8 +42,9 @@ src/
 │   └── MultiplicationTable.java
 └── test/java/dev/multiplicationtable/
     └── MultiplicationTableTest.java
-pom.xml
+.editorconfig
 .gitignore
+pom.xml
 README.md
 ```
 
