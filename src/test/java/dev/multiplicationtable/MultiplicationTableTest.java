@@ -3,6 +3,9 @@ package dev.multiplicationtable;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 class MultiplicationTableTest {
 
     private final MultiplicationTable table = new MultiplicationTable();
@@ -40,5 +43,17 @@ void shouldGenerateTableForSeven() {
     void shouldHandleNegativeNumber() {
         assertEquals("-3 x 1 = -3" + System.lineSeparator(),
             table.generate(-3).lines().findFirst().get() + System.lineSeparator());
+    }
+
+     @Test
+    void shouldPrintTableForSeven() {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        table.print(7);
+
+        System.setOut(originalOut);
+        assertEquals(table.generate(7), outputStream.toString());
     }
 }
